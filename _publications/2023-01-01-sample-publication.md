@@ -1,10 +1,23 @@
 ---
-layout: publication
-title: "Sample Publication"
-date: 2023-01-01
-authors: "Author Name"
-venue: "Conference Name"
-url: /publications/sample-publication/
+layout: page
+title: Sample Publication
+description: A brief description of your publication
+img: assets/img/publication_preview/paper-preview.jpg
+importance: 1
+category: work
 ---
 
-Detailed content about the publication goes here. 
+## Abstract
+[Your paper abstract here]
+
+## Introduction
+[Introduction to your research]
+
+## Methods
+[Research methodology]
+
+## Results
+[Key findings and results]
+
+## Conclusion
+[Research conclusions] 
