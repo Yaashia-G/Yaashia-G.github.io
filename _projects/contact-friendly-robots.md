@@ -1,9 +1,10 @@
 ---
-layout: publication
-title: "Your Paper Title"
-authors: "Yaashia Gautam, Other Authors"
-venue: "Conference/Journal Name 2024"
-permalink: /projects/contact-friendly-robots/
+layout: page
+title: Your Paper Title
+description: Detailed description of your research paper
+img: assets/img/publication_preview/your_preview_image.jpg
+importance: 1
+category: work
 ---
 
 ## Abstract
