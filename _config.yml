@@ -56,3 +56,19 @@ scholar:
   details_layout: bibtex.html
   details_link: Details
   query: "@*"
+
+# Add this section for third-party libraries
+third_party_libraries:
+  bootstrap:
+    version: "4.6.1"
+    js: true
+    css: true
+  fontawesome:
+    version: "5.15.4"
+    css: true
+  jquery:
+    version: "3.6.0"
+    js: true
+  academicons:
+    version: "1.9.1"
+    css: true
