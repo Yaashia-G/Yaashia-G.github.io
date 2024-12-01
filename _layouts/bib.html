@@ -1,0 +1,88 @@
+---
+---
+
+<div class="row">
+  <div class="col-sm-2 abbr">
+  {%- if entry.abbr -%}
+    {%- if site.data.venues[entry.abbr] -%}
+    <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+    {%- else -%}
+    <abbr class="badge">{{entry.abbr}}</abbr>
+    {%- endif -%}
+  {%- endif -%}
+  </div>
+
+  <div id="{{entry.key}}" class="col-sm-8">
+    {% if entry.project_page %}
+    <div class="title"><a href="{{ site.baseurl }}/projects/{{ entry.project_page }}">{{entry.title}}</a></div>
+    {% else %}
+    <div class="title">{{entry.title}}</div>
+    {% endif %}
+    <div class="author">
+      {% for author in entry.author_array %}
+        {% assign author_is_self = false %}
+        {% if author.last == site.scholar.last_name%}
+          {% if site.scholar.first_name contains author.first%}
+            {% assign author_is_self = true %}
+          {% endif %}
+        {% endif %}
+        {% assign coauthor_url = nil %}
+        {% if site.data.coauthors[author.last] %}
+          {% for coauthor in site.data.coauthors[author.last] %}
+            {% if coauthor.first contains author.first %}
+              {% assign coauthor_url = coauthor.url %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        
+        {% if forloop.length == 1 %}
+          {% if author_is_self %}
+            <em>{{author.first}} {{author.last}}</em>
+          {% else %}
+            {{author.first}} {{author.last}}
+          {% endif %}
+        {% else %}
+          {% unless forloop.last %}
+            {% if author_is_self %}
+              <em>{{author.first}} {{author.last}}</em>,
+            {% else %}
+              {% if coauthor_url %}
+                <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>,
+              {% else %}
+                {{author.first}} {{author.last}},
+              {% endif %}
+            {% endif %}
+          {% else %}
+            {% if author_is_self %}
+              and <em>{{author.first}} {{author.last}}</em>
+            {% else %}
+              {% if coauthor_url %}
+                and <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+              {% else %}
+                and {{author.first}} {{author.last}}
+              {% endif %}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="periodical">
+    {%- if entry.type == "thesis" -%}
+      {%- if entry.school -%}
+        <em>{{entry.school}}</em>
+      {%- endif -%}
+    {%- else -%}
+      {%- if entry.journal -%}
+        <em>{{entry.journal}}</em>
+      {%- elsif entry.booktitle -%}
+        <em>{{entry.booktitle}}</em>
+      {%- endif -%}
+    {%- endif -%}
+    {%- if entry.year -%}
+      {{entry.year}}
+    {%- endif -%}
+    </div>
+  </div>
+</div> 

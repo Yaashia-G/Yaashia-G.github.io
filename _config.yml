@@ -199,7 +199,7 @@ collections:
     permalink: /:collection/:title/
   projects:
     output: true
-    permalink: /:collection/:title/
+    permalink: /projects/:path/
 
 announcements:
   enabled: true
