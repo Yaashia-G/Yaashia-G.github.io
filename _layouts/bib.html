@@ -5,7 +5,7 @@
   <div class="col-sm-2 abbr">
   {%- if entry.abbr -%}
     {%- if site.data.venues[entry.abbr] -%}
-    <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+    <abbr class="badge"><a href="{{ site.data.venues[entry.abbr].url | relative_url }}">{{entry.abbr}}</a></abbr>
     {%- else -%}
     <abbr class="badge">{{entry.abbr}}</abbr>
     {%- endif -%}
@@ -14,7 +14,7 @@
 
   <div id="{{entry.key}}" class="col-sm-8">
     {% if entry.project_page %}
-    <div class="title"><a class="publication-title" href="{{ site.baseurl }}/projects/{{ entry.project_page }}">{{entry.title}}</a></div>
+    <div class="title"><a href="{{ '/projects/' | relative_url }}{{ entry.project_page }}">{{entry.title}}</a></div>
     {% else %}
     <div class="title">{{entry.title}}</div>
     {% endif %}
