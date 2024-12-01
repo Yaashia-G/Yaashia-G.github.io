@@ -9,66 +9,24 @@ description: >
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, academics, portfolio  # Add your keywords here
+keywords: jekyll, academics, portfolio
 
-lang: en
-icon: ⚛️  # the emoji used as the favicon
-url: https://yaashia-g.github.io
-baseurl: 
-last_updated: false
-impressum_path: 
-
-# Layout config
-navbar_fixed: true
-footer_fixed: true
-max_width: 800px
-
-# Open Graph & Schema.org
-serve_og_meta: false
-serve_schema_org: false
-
-# Collections
-collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-news_scrollable: true
-news_limit: 5
-
-# Jekyll scholar
-scholar:
-  style: apa
-  locale: en
-  sort_by: year
-  order: descending
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  replace_strings: true
-  join_strings: true
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
-  query: "@*"
-
-# Add this section for third-party libraries
+# Third-party libraries
 third_party_libraries:
   bootstrap:
     version: "4.6.1"
-    js: true
-    css: true
+    url:
+      css: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      js: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
   fontawesome:
     version: "5.15.4"
-    css: true
+    url:
+      css: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
   jquery:
     version: "3.6.0"
-    js: true
+    url:
+      js: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
   academicons:
     version: "1.9.1"
-    css: true
+    url:
+      css: "https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css"

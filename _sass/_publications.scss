@@ -1,11 +1,25 @@
 .publications {
-  .publication-title {
+  margin-top: 2rem;
+  
+  h2.year {
     color: var(--global-theme-color);
-    text-decoration: none;
-    
-    &:hover {
-      color: var(--global-hover-color);
-      text-decoration: underline;
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .publication-title {
+    font-size: 1.2rem;
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--global-hover-color);
+        text-decoration: underline;
+      }
     }
   }
 } 
