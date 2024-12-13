@@ -6,7 +6,7 @@ permalink: /
 subtitle: PhD student. Robotics Enthusiast. Contact Friendly Robots.
 profile:
   align: right
-  image: prof_pic.jpg
+  image: yg_prof_pic.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
