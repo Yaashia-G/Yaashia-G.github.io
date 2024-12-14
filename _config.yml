@@ -200,6 +200,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
 
 announcements:
   enabled: true
