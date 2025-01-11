@@ -16,7 +16,7 @@ $$ \dot v = \rho (v,r) \Delta (v, q)$$
 
 While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
 
-# Introduction
+## Introduction
 The CERG is a 
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
