@@ -13,7 +13,7 @@ is a control scheme that is an optimisation free alternative to
 controlling complex systems, such as robots (add reference). It uses a reference governor that changes the target of the system such that the system remains within the safety constraints at all given times. To achieve this ,the ERG defines the gradient of the reference using a Navigation Field and a Dynamic Safety Margin
 $$E=mc^2$$
 
-While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraint types 
+While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor. 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
     ---
