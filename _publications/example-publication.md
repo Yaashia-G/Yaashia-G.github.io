@@ -1,16 +1,15 @@
 ---
 layout: page
 title: Compliant Explicit Reference Governor
-description: with background image
+description: ERG for contact friendly robotics
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
-
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The Explicit Reference Governor (ERG)
+is a control scheme that is an optimisation free alternative to
+controlling complex systems, such as robots (add reference. It uses a reference governor that changes the target of the system such that the system remains within the safety constraints at all given times.  
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
