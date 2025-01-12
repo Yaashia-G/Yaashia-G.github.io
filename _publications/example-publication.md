@@ -10,7 +10,7 @@ math: true
 ---
 The Explicit Reference Governor (ERG)
 is a control scheme that is an optimisation free alternative to
-controlling complex systems, such as robots (add reference). It uses a reference governor that changes the reference, $$r$$ such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x)$$
+controlling complex systems, such as robots (add reference). It uses a reference governor that changes the reference, $$r$$ such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x)$$ as shown
 
 $$ \dot v = \rho (v,r) \Delta (v, x)$$
 
@@ -21,7 +21,8 @@ $$ u = -K_P(x-v)-K_D(\dot x)$$
 While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
 
 ## Introduction
-The CERG is a refernece management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which at steady state can be converted to Maximum Force Limitations. The CERG algorithm is such that it ensures that 
+The CERG is a reference management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which at steady state can be converted to Maximum Force Limitations. The CERG algorithm is such that it ensures that soft constraints are only violated if necessary, and the interaction is safe, whereas hard constraints are never violated. 
+
 The CERG uses the same basic block diagram as the ERG, however the Navigation Field and Dynamic Safety Margin both have two components $$\rho_s(v,r), \rho_h(v,r)$$ and $$\Delta_s(v,x), \Delta_h(v,x)$$ to deal with soft and hard constraints respecitvely.  
 
 ## Experiments and Results
