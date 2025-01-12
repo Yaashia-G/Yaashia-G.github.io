@@ -27,7 +27,7 @@ The CERG is a reference management scheme that differentiates between soft and h
 The CERG uses the same basic block diagram as the ERG, however the Navigation Field and Dynamic Safety Margin both have two components $$\rho_s(v,r), \rho_h(v,r)$$ and $$\Delta_s(v,x), \Delta_h(v,x)$$ to deal with soft and hard constraints respecitvely.  
 
 ## Experiments and Results
-
+Numerical Experiments that validated the premise of the CERG scheme were run on a point mass system, a Two Link Robot Manipulator and on a simulation of the 7-DoF Franka Emika in Drake. All 3 levels of complexities have shown that the CERG performs as expected. 
 <!-- To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
     ---
@@ -46,14 +46,7 @@ The CERG uses the same basic block diagram as the ERG, however the Navigation Fi
     Compliant ERG architecture. The reference is applied to the CERG system which then applies the auxillary reference to the prestabilised system. 
 </div>
 
-<!-- <div class="row"> -->
-<!--     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div> -->
-<!-- </div> -->
-<!-- <div class="caption">
-    This image can also have a caption. It's like magic.
-</div> -->
+
 
 You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
 Say you wanted to write a bit about your project before you posted the rest of the images.
