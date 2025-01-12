@@ -49,8 +49,9 @@ The CERG uses the same basic block diagram as the ERG, however the Navigation Fi
     </div> -->
 </div>
 <div class="caption">
-    Compliant ERG architecture. The reference is 
+    Compliant ERG architecture. The reference is applied to the CERG system which then 
 </div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
