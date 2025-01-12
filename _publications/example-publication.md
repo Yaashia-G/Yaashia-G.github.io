@@ -10,9 +10,9 @@ math: true
 ---
 The Explicit Reference Governor (ERG)
 is a control scheme that is an optimisation free alternative to
-controlling complex systems, such as robots (add reference). It uses a reference governor that changes the target of the system such that the system remains within the safety constraints at all given times. To achieve this ,the ERG defines the gradient of the reference using a Navigation Field and a Dynamic Safety Margin
+controlling complex systems, such as robots (add reference). It uses a reference governor that changes the reference, $$r$$ such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. To achieve this ,the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field $$\rho(v,r)$$ and a Dynamic Safety Margin $$ \Delta(v,x)$$
 
-$$ \dot v = \rho (v,r) \Delta (v, q)$$
+$$ \dot v = \rho (v,r) \Delta (v, x)$$
 
 While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
 
