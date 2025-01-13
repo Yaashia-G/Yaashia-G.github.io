@@ -52,7 +52,6 @@ The details of the Two Link Robot can be found in (cite the book)
         {% include figure.liquid loading="eager" path="assets/img/RR_penetration_F.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 <div class="caption">
     Compliant ERG architecture. The reference is applied to the CERG system which then applies the auxillary reference to the prestabilised system. 
 </div>
@@ -60,10 +59,19 @@ The details of the Two Link Robot can be found in (cite the book)
 
 
 
+<div class="row">
+    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/RR_arm-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/RR_arm force.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Compliant ERG architecture. The reference is applied to the CERG system which then applies the auxillary reference to the prestabilised system. 
+</div>
 
-
-
-
+### Drake Simulations of the Franka Emika 
 
 You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
 Say you wanted to write a bit about your project before you posted the rest of the images.
