@@ -10,7 +10,7 @@ math: true
 ---
 The Explicit Reference Governor (ERG)
 is a control scheme that is an optimisation free alternative to
-controlling complex systems, such as robots (add reference). It uses a reference governor that changes the reference, $$r$$ such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x)$$ as shown
+controlling complex systems, such as robots (add reference). It uses a reference governor that changes the reference, $$r$$ such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x) $$ as shown
 
 $$ \dot v = \rho (v,r) \Delta (v, x)$$
 
@@ -37,15 +37,22 @@ The CERG uses the same basic block diagram as the ERG, however the Navigation Fi
 
 ## Experiments and Results
 Numerical Experiments that validated the premise of the CERG scheme were run on a point mass system, a Two Link Robot Manipulator and on a simulation of the 7-DoF Franka Emika in Drake. All 3 levels of complexities have shown that the CERG performs as expected. 
+
 ### Point Mass System 
 The details of the system and CERG algorithm can be found in (add reference to your arxiv paper)  
+
 ### Two Link Robot Manipulator 
 The details of the Two Link Robot can be found in (cite the book) 
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/RR_penetration-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/RR_penetration_F.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
+
 <div class="caption">
     Compliant ERG architecture. The reference is applied to the CERG system which then applies the auxillary reference to the prestabilised system. 
 </div>
