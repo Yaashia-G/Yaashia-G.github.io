@@ -2,7 +2,7 @@
 layout: page
 title: Compliant Explicit Reference Governor
 description: ERG for contact friendly robotics
-img: assets/img/12.jpg
+img: assets/img/cerg block diag.jpg
 importance: 1
 category: work
 related_publications: true
