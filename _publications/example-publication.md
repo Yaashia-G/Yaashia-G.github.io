@@ -55,7 +55,7 @@ Now to understand the effects of the penetration constant $$\delta_s$$, let us s
     </div>
 </div>
 <div class="caption">
-    $$\delta_s = 0.1F_{\max}/K_P$$, A lower penetration constant means a relatively lower force of pushing. This also means that we don't 'enter' our soft constraint as much. 
+    $$\delta_s = 0.1F_{\max}/K_P$$ A lower penetration constant means a relatively lower force of pushing. This also means that we don't 'enter' our soft constraint as much. 
 </div>
 As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum force of interaction. 
 
@@ -69,7 +69,7 @@ Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector 
     </div>
 </div>
 <div class="caption">
- $$\delta_s = 0.9F_{\max}/K_P$$, A higher penetration constant means a relatively higher force of pushing.  
+ $$\delta_s = 0.9F_{\max}/K_P$$ A higher penetration constant means a relatively higher force of pushing.  
 </div>
 
 It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
