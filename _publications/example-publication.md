@@ -10,7 +10,7 @@ math: true
 ---
 The Explicit Reference Governor (ERG)
 is a control scheme that is an optimisation free alternative to
-controlling complex systems, such as robots {% cite ERG %} . It uses a reference governor that manipulates the reference, $$r$$, creating an auxillary reference such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. It is worth noting that $$\lim_{t \to \infty} v(t) = r$$. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x) $$ as shown
+controlling complex systems, such as robots {% cite ERG %}, {% cite MERCKAERT2022102223 %} . It uses a reference governor that manipulates the reference, $$r$$, creating an auxillary reference such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. It is worth noting that $$\lim_{t \to \infty} v(t) = r$$. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x) $$ as shown
 
 $$ \dot v = \rho (v,r) \Delta (v, x)$$
 
@@ -18,7 +18,7 @@ This reference is then applied to the prestabilised system
 
 $$ u = -K_P(x-v)-K_D(\dot x)$$
 
-While the ERG is a great scheme that is also computationally inexpensive (add reference), it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
+While the ERG is a great scheme that is also computationally inexpensive {% cite RRT+ERG %}, it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
 
 
 ## Introduction
@@ -42,7 +42,7 @@ Numerical Experiments that validated the premise of the CERG scheme were run on 
 
 
 ### Two Link Robot Manipulator 
-The details of the Two Link Robot can be found in (cite the book). For the purpose of this example, we choose our prestabilising law to be in end effector frame as shown 
+The details of the Two Link Robot can be found in {% cite ModernRobotics %}. For the purpose of this example, we choose our prestabilising law to be in end effector frame as shown 
 $$ u = -K_P J(q)^\top (f(q) - f(v)) - K_D\dot q + g(q) $$
 Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under the $$F_{/max} = 5N$$. 
 Now to understand the effects of the penetration constant $$\delta_s$$, let us set it as $$\delta_s = 0.1F_{\max}/K_P$$.   
