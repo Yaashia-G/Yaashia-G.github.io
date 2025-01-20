@@ -11,7 +11,7 @@ profile:
   more_info: 
 
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false 
 social: true # includes social icons at the bottom of the page
 ---
 Hi, I'm Yaashia Gautam! I am a PhD student in the [Department of Electrical, Computer, and Energy Engineering](https://www.colorado.edu/ecee/) at the University of Colorado, Boulder. I am advised by [Professor Marco Nicotra](https://www.colorado.edu/faculty/nicotra). My research is centered around robotic controls and manipulation. I am developing on making robots contact friendly, and leverage methods in control theory to do so. I am particularly interested in leveraging the intersection of AI/ML and control theory to develop better methods for human-robot interaction keeping safety considerations in mind.
