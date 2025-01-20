@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 ---
 
-I presented my work on Hypersample Model Predictive Control at the American Control Conference, Toronto in the form of a Rapid-Interactive session! 
+I presented my work on Hypersampled Model Predictive Control at the American Control Conference, Toronto in the form of a Rapid-Interactive session! 
 
 
