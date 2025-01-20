@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024 May 13
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I am happy to announce that I am beginning my internship with NVIDIA Autonomous Vehicle Group as a Controls Software Engineer Intern under my manager Yue Sun and mentor Mohammed Nasir! Excited to begin this adventure and explore control algorithms augmented with learning methods.
