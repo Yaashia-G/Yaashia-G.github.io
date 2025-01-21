@@ -97,7 +97,12 @@ length of only N = 5 steps.
 ### Nonlinear Lane Change 
 To emphasize the advantages of HMPC with a more
 complex example, we consider the nonlinear lane change
-system detailed in {% cite %}
+system detailed in {% cite lane_change%}.
+We compare the state and input trajec-
+tories obtained using three different schemes:
+- MPC1: ts = td = 0.04;
+- HMPC: ts = 0.04 and td = 0.2;
+- MPC2: ts = td = 0.2.
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/x_nlc_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
