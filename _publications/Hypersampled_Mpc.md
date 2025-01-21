@@ -81,7 +81,7 @@ The details of the Point mass system with disturbance can be found in {% cite HM
         {% include figure.liquid loading="eager" path="assets/img/error_di_ts0.02_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/t_di_err_ts0.02_page-0001" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/t_di_err_ts0.02_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
