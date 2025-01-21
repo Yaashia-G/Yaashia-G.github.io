@@ -87,7 +87,12 @@ The details of the Point mass system with disturbance can be found in {% cite HM
 <div class="caption">
    _Left:_ Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. _Right:_ The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that consistently satisfies the real-time requirements.
 </div>
-
+The disadvantage of MPC1 becomes apparent by examining the computation time required to solve the underlying
+OCP. As shown, the time required to solve
+MPC1 is approximately 30 times more than HMPC and
+MPC2. This is because MPC1 has a prediction length of
+N = 100 steps, whereas HMPC and MPC2 have a prediction
+length of only N = 5 steps.
 
 ### Nonlinear Lane Change 
 
