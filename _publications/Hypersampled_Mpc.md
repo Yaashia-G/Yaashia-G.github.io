@@ -20,15 +20,18 @@ widespread adoption is hindered by the fact that solving the
 optimal control problem in real time can be challenging
 
 ## Introduction
-Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discrtise the system. This
+Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discretise the system. This
 approach assumes that the dynamic model of the system
-matches the prediction model of the OCP. An unfortunate
+matches the prediction model of the OCP. 
+
+An unfortunate
 consequence is that, for a fixed prediction horizon, reducing
 the sampling time inevitably leads to an increased number
 of prediction steps. This has the combined negative effect of
 increasing the numerical complexity of the OCP while also
 decreasing the allocated time for solving it.
-The paper seeks to formalize the distinction between _discretization time_ $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_ $$t_s$$, i.e., the time at which the controller is implemented
+
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -40,8 +43,7 @@ The paper seeks to formalize the distinction between _discretization time_ $$t_d
 optimal control law to the discretized MPC problem
 </div>
 
-The CERG uses the same basic block diagram as the ERG, however the Compliant Navigation Field and Compliant Dynamic Safety Margin both have two components $$\rho_s(v,r), \rho_h(v,r)$$ and $$\Delta_s(v,x), \Delta_h(v,x)$$ to deal with soft and hard constraints respecitvely.  
-In the paper (cite) we prove that the structure of the Compliant Dynamic Safety Margin is such that it ensures that either no constraints are violated, or if necessary, only soft constraints are violated within the energy limitations.  
+The paper seeks to formalize the distinction between _discretization time_ $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_ $$t_s$$, i.e., the time at which the controller is implemented
 ## Experiments and Results
 Numerical Experiments that validated the premise of the CERG scheme were run on a point mass system, a Two Link Robot Manipulator and on a simulation of the 7-DoF Franka Emika in Drake. All 3 levels of complexities have shown that the CERG performs as expected. The details of the point mass system are discussed in (cite)
 
