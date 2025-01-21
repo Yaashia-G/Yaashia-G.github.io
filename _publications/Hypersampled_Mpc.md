@@ -3,7 +3,7 @@ layout: page
 title: Hypersampled Model Predictive Control
 description: Distinction between sampling and discretization
 img: assets/img/flow2_page-0001.jpg
-importance: 1
+importance: 2
 category: work
 related_publications: true
 math: true
@@ -98,8 +98,7 @@ length of only N = 5 steps.
 To emphasize the advantages of HMPC with a more
 complex example, we consider the nonlinear lane change
 system detailed in {% cite lane_change%}.
-We compare the state and input trajec-
-tories obtained using three different schemes:
+We compare the state and input trajectories obtained using three different schemes:
 - MPC1: ts = td = 0.04s;
 - HMPC: ts = 0.04s and td = 0.2s;
 - MPC2: ts = td = 0.2s.
