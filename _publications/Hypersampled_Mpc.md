@@ -72,9 +72,9 @@ translate into an upper bound on td.
 
 ### Point Mass System 
 The details of the Point mass system with disturbance can be found in {% cite HMPC %}. We compare the performance of two MPC schemes and a HMPC scheme.
-- MPC1: ts = td = 0.02;
-- HMPC: ts = 0.02 and td = 0.4;
-- MPC2: ts = td = 0.4.
+- MPC1: ts = td = 0.02s;
+- HMPC: ts = 0.02s and td = 0.4s;
+- MPC2: ts = td = 0.4s.
  
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
@@ -85,7 +85,7 @@ The details of the Point mass system with disturbance can be found in {% cite HM
     </div>
 </div>
 <div class="caption">
-   _Left_: Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. _Right_: The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that consistently satisfies the real-time requirements.
+   Left: Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. Right: The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that consistently satisfies the real-time requirements.
 </div>
 The disadvantage of MPC1 becomes apparent by examining the computation time required to solve the underlying
 OCP. As shown, the time required to solve
@@ -100,9 +100,9 @@ complex example, we consider the nonlinear lane change
 system detailed in {% cite lane_change%}.
 We compare the state and input trajec-
 tories obtained using three different schemes:
-- MPC1: ts = td = 0.04;
-- HMPC: ts = 0.04 and td = 0.2;
-- MPC2: ts = td = 0.2.
+- MPC1: ts = td = 0.04s;
+- HMPC: ts = 0.04s and td = 0.2s;
+- MPC2: ts = td = 0.2s.
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/x_nlc_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -112,10 +112,13 @@ tories obtained using three different schemes:
     </div>
 </div>
 <div class="caption">
-
+    Left: The state trajectories for the nonlinear lane change model. The
+trajectories of MPC1 and HMPC perform similarly, whereas MPC2 leads
+to an unstable closed-loop response. Right: Computation time utilized by MPC1 and HMPC compared to the
+sampling time ts. The computation time of MPC2 is not included due to
+the fact that the response is unstable.
 </div>
 
-It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
 
 
 
