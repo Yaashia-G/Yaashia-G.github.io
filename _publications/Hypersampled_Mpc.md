@@ -75,8 +75,7 @@ The details of the Point mass system with disturbance can be found in {% cite HM
 - MPC1: ts = td = 0.02;
 - HMPC: ts = 0.02 and td = 0.4;
 - MPC2: ts = td = 0.4.
-Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under the $$F_{/max} = 5N$$. 
-Now to understand the effects of the penetration constant $$\delta_s$$, let us set it as $$\delta_s = 0.1F_{\max}/K_P$$.   
+ 
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/error_di_ts0.02_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
