@@ -17,7 +17,7 @@ every instant and apply the first step of the optimal control
 sequence to the system. . Although MPC is widely used due
 to its stability, feasibility, and robustness properties (cite) , its
 widespread adoption is hindered by the fact that solving the
-optimal control problem in real time can be challenging
+optimal control problem in real time can be challenging. So we analyse the Hypersampled Model Predictive Control (HMPC) scheme, which is more efficient.
 
 ## Introduction
 Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discretise the system. This
@@ -43,9 +43,30 @@ decreasing the allocated time for solving it.
 optimal control law to the discretized MPC problem
 </div>
 
-The paper seeks to formalize the distinction between _discretization time_ $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_ $$t_s$$, i.e., the time at which the controller is implemented
+The paper seeks to formalize the distinction between _discretization time_  $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_  $$t_s$$, i.e., the time at which the controller is implemented.
+
 ## Experiments and Results
-Numerical Experiments that validated the premise of the CERG scheme were run on a point mass system, a Two Link Robot Manipulator and on a simulation of the 7-DoF Franka Emika in Drake. All 3 levels of complexities have shown that the CERG performs as expected. The details of the point mass system are discussed in (cite)
+Numerical Experiments that validate the efficiency of the HMPC scheme were run on a point mass system and a Lane change problem. All levels of complexities have shown that the HMPC performs better than traditional MPC schemes. 
+
+We note the following properties:
+• Benefits of Decreasing ts: Reducing the sampling
+time tends to improve the performance of the controller
+by making it more reactive to external disturbances.
+Generally speaking, one would like ts to be as small
+as possible to mimic continuous-time behaviour.
+• Limit for Decreasing ts: Due to real-time imple-
+mentation requirements, ts is lower-bounded by the
+computational time required to solve (8).
+• Benefits of Increasing td: Given a fixed prediction
+horizon T , a larger discretization time step td leads to
+less prediction steps N . Since the computational com-
+plexity of (8) scales with N , it is generally beneficial
+for td to be as large as possible.
+• Limit for Increasing td: Since larger values of td
+increase the discrepancy between 
+an upper bound on the maximal admissible error will
+translate into an upper bound on td.
+
 
 
 
@@ -82,19 +103,7 @@ Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector 
 
 It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
 
-### Drake Simulations of the Franka Emika 
-Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emika in <a href="https://drake.mit.edu/" target="_blank"> Drake simulator</a>. The contact model is chosen to be (check). The Franka robot is subject to all the actuator, speed and torque limitations as specified [here](https://frankaemika.github.io/docs/control_parameters.html), the reference of the Franka is inside the soft blue wall and the maximum force of interaction is set in the direction of pushing, $$F_x = 0.8N$$. As can be seen by the contact forces calculated in the Drake model, the maximum force of interaction in the $$x$$ coordinate is around $$0.4N$$, which is well within range.  
-<div class="row">
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FR3-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Contact_Forces.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Compliant ERG validated on the Franka Emika robot in Drake. 
-</div>
+
 
 
 
