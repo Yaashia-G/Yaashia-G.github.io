@@ -71,7 +71,10 @@ translate into an upper bound on td.
 
 
 ### Point Mass System 
-The details of the Point mass system with disturbance can be found in {% cite HMPC %}. 
+The details of the Point mass system with disturbance can be found in {% cite HMPC %}. We compare the performance of two MPC schemes and a HMPC scheme.
+- MPC1: ts = td = 0.02;
+- HMPC: ts = 0.02 and td = 0.4;
+- MPC2: ts = td = 0.4.
 Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under the $$F_{/max} = 5N$$. 
 Now to understand the effects of the penetration constant $$\delta_s$$, let us set it as $$\delta_s = 0.1F_{\max}/K_P$$.   
 <div class="row">
@@ -88,7 +91,7 @@ Now to understand the effects of the penetration constant $$\delta_s$$, let us s
 As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum force of interaction. 
 
 ### Nonlinear Lane Change 
-Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector trajectory enters the soft constraint. The force of pushing is also higher. At steady state we converge to $$F>0$$. 
+
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/x_nlc_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -98,7 +101,7 @@ Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector 
     </div>
 </div>
 <div class="caption">
- $$\delta_s = 0.9F_{\max}/K_P$$ A higher penetration constant means a relatively higher force of pushing.  
+
 </div>
 
 It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
