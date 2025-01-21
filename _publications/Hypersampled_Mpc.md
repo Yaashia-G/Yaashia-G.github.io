@@ -2,24 +2,20 @@
 layout: page
 title: Hypersampled Model Predictive Control
 description: Distinction between sampling and discretization
-img: assets/img/cerg block diag.jpg
+img: assets/img/flow.jpg
 importance: 1
 category: work
 related_publications: true
 math: true
 ---
-The Explicit Reference Governor (ERG)
-is a control scheme that is an optimisation free alternative to
-controlling complex systems, such as robots {% cite ERG %}, {% cite MERCKAERT2022102223 %} . It uses a reference governor that manipulates the reference, $$r$$, creating an auxillary reference such that the system, $$\dot x= f(x,u)$$ remains within the safety constraints at all given times. It is worth noting that $$\lim_{t \to \infty} v(t) = r$$. To achieve this, the ERG defines the gradient of the auxillary reference $$v$$, using a Navigation Field, $$\rho(v,r)$$ and a Dynamic Safety Margin, $$ \Delta(v,x) $$ as shown
-
-$$ \dot v = \rho (v,r) \Delta (v, x)$$
-
-This reference is then applied to the prestabilised system 
-
-$$ u = -K_P(x-v)-K_D(\dot x)$$
-
-While the ERG is a great scheme that is also computationally inexpensive {% cite RRT+ERG %}, it does not differentiate between constraints. We propose a scheme where we can differentiate between hard and soft constraints, giving more flexibility to our robotic systems. We can use this particular feature to be able to make contact friendly robots. We name this scheme Compliant Explicit Reference Governor (CERG). 
-
+Model Predictive Control (MPC) is a popular constrained
+control strategy for nonlinear systems. The idea behind
+MPC is to solve an Optimal Control Problem (OCP) at
+every instant and apply the first step of the optimal control
+sequence to the system. . Although MPC is widely used due
+to its stability, feasibility, and robustness properties , its
+widespread adoption is hindered by the fact that solving the
+optimal control problem in real time can be challenging
 
 ## Introduction
 The CERG is a reference management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. 
