@@ -2,7 +2,7 @@
 layout: page
 title: Hypersampled Model Predictive Control
 description: Distinction between sampling and discretization
-img: assets/img/flow.jpg
+img: assets/img/flow2_page-0001.jpg
 importance: 1
 category: work
 related_publications: true
@@ -13,7 +13,7 @@ control strategy for nonlinear systems. The idea behind
 MPC is to solve an Optimal Control Problem (OCP) at
 every instant and apply the first step of the optimal control
 sequence to the system. . Although MPC is widely used due
-to its stability, feasibility, and robustness properties , its
+to its stability, feasibility, and robustness properties (cite) , its
 widespread adoption is hindered by the fact that solving the
 optimal control problem in real time can be challenging
 
