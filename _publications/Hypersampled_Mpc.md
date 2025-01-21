@@ -83,17 +83,18 @@ Now to understand the effects of the penetration constant $$\delta_s$$, let us s
     </div>
 </div>
 <div class="caption">
-    $$\delta_s = 0.1F_{\max}/K_P$$ A lower penetration constant means a relatively lower force of pushing. This also means that we don't 'enter' our soft constraint as much. 
+   
 </div>
 As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum force of interaction. 
 
+### Nonlinear Lane Change 
 Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector trajectory enters the soft constraint. The force of pushing is also higher. At steady state we converge to $$F>0$$. 
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/RR_penetration-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/x_nlc_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/RR_penetration_F.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/tcomp_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
