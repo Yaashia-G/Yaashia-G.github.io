@@ -8,6 +8,8 @@ category: work
 related_publications: true
 math: true
 ---
+_Access the paper  <a href="https://arxiv.org/abs/2310.02623" target="_blank">here </a>. Accepted to ACC 2024_
+
 Model Predictive Control (MPC) is a popular constrained
 control strategy for nonlinear systems. The idea behind
 MPC is to solve an Optimal Control Problem (OCP) at
@@ -18,16 +20,24 @@ widespread adoption is hindered by the fact that solving the
 optimal control problem in real time can be challenging
 
 ## Introduction
-The CERG is a reference management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. 
-One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which at steady state can be converted to Maximum Force Limitations. The CERG algorithm is such that it ensures that soft constraints are only violated if necessary, and the interaction is safe, whereas hard constraints are never violated.
+Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discrtise the system. This
+approach assumes that the dynamic model of the system
+matches the prediction model of the OCP. An unfortunate
+consequence is that, for a fixed prediction horizon, reducing
+the sampling time inevitably leads to an increased number
+of prediction steps. This has the combined negative effect of
+increasing the numerical complexity of the OCP while also
+decreasing the allocated time for solving it.
+The paper seeks to formalize the distinction between _discretization time_ $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_ $$t_s$$, i.e., the time at which the controller is implemented
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/cerg block diag.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/flow2_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Compliant ERG architecture. The reference is applied to the CERG system which then applies the auxillary reference to the prestabilised system. 
+    Hypersampled Model Predictive Control. The continuous system is sampled at timestep ts to generate xk , which is then used to compute the
+optimal control law to the discretized MPC problem
 </div>
 
 The CERG uses the same basic block diagram as the ERG, however the Compliant Navigation Field and Compliant Dynamic Safety Margin both have two components $$\rho_s(v,r), \rho_h(v,r)$$ and $$\Delta_s(v,x), \Delta_h(v,x)$$ to deal with soft and hard constraints respecitvely.  
