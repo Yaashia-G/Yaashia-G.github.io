@@ -85,9 +85,9 @@ The details of the Point mass system with disturbance can be found in {% cite HM
     </div>
 </div>
 <div class="caption">
-   
+   _Left:_ Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. _Right:_ The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that consistently satisfies the real-time requirements.
 </div>
-As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum force of interaction. 
+
 
 ### Nonlinear Lane Change 
 
