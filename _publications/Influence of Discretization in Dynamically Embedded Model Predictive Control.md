@@ -16,16 +16,7 @@ a continuous-time MPC scheme that tracks the solution to
 the OCP with a bounded error, (cite). In this paper, we analyse the effect of discretisation on DE-MPC. Intuitively having more acccurate discretisation (smaller $$t_d$$) would lead to more stable control law, however that is not true.  
 
 ## Introduction
-Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discretise the system. This
-approach assumes that the dynamic model of the system
-matches the prediction model of the OCP. 
 
-An unfortunate
-consequence is that, for a fixed prediction horizon, reducing
-the sampling time inevitably leads to an increased number
-of prediction steps. This has the combined negative effect of
-increasing the numerical complexity of the OCP while also
-decreasing the allocated time for solving it.
 
 
 
