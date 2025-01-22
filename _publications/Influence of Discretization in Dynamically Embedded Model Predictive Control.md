@@ -2,7 +2,7 @@
 layout: page
 title: Influence of Discretization in Dynamically Embedded Model Predictive Control
 description: A counter intuitive effect of discretisation time step in Dynamically Embedded MPC
-img: assets/img/flow2_page-0001.jpg
+img: assets/img/system.jpg
 importance: 3
 category: work
 related_publications: true
@@ -10,14 +10,10 @@ math: true
 ---
 _Access the paper  <a href="https://www.sciencedirect.com/science/article/pii/S2405896323016956" target="_blank">here </a>. Accepted to IFAC  World Congress 2023_
 
-Model Predictive Control (MPC) is a popular constrained
-control strategy for nonlinear systems. The idea behind
-MPC is to solve an Optimal Control Problem (OCP) at
-every instant and apply the first step of the optimal control
-sequence to the system. . Although MPC is widely used due
-to its stability, feasibility, and robustness properties (cite) , its
-widespread adoption is hindered by the fact that solving the
-optimal control problem in real time can be challenging. So we analyse the Hypersampled Model Predictive Control (HMPC) scheme, which is more efficient.
+As is popularly known, Model Predictive Control is a popular control scheme for many complex systems. However, implementing it to continuous systems, $$ \dot x = f(x,u)$$ is almost impossible if we choose to solve a Continuous Time Optimal Control Problem (CT-OCP). So, a more practical method is to solve a Discretised Optimal Control Problem (DT-OCP). One of the ways to find the optimal control law is to solve the DT-OCP using a continuous solver. The result, hereafter
+referred to as Dynamically Embedded MPC (DE-MPC), is
+a continuous-time MPC scheme that tracks the solution to
+the OCP with a bounded error, (cite). In this paper, we analyse the effect of discretisation on DE-MPC. Intuitively having more acccurate discretisation (smaller $$t_d$$) would lead to more stable control law, however that is not true.  
 
 ## Introduction
 Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discretise the system. This
