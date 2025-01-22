@@ -13,7 +13,7 @@ _Access the paper  <a href="https://www.sciencedirect.com/science/article/pii/S2
 As is known, Model Predictive Control is a popular control scheme for many complex systems. However, implementing it to continuous systems, $$ \dot x = f(x,u)$$ is almost impossible if we choose to solve a Continuous Time Optimal Control Problem (CT-OCP). So, a more practical method is to solve a Discretised Optimal Control Problem (DT-OCP). One of the ways to find the optimal control law is to solve the DT-OCP using a continuous solver. The result, hereafter
 referred to as Dynamically Embedded MPC (DE-MPC), is
 a continuous-time MPC scheme that tracks the solution to
-the OCP with a bounded error, (cite). In this paper, we analyse the effect of discretisation on DE-MPC. Intuitively having more acccurate discretisation (smaller $$t_d$$) would lead to more stable control law, however that is not true.  
+the OCP with a bounded error, {% cite DEmpc %}. In this paper, we analyse the effect of discretisation on DE-MPC. Intuitively having more acccurate discretisation (smaller $$t_d$$) would lead to more stable control law, however that is not true.  
 
 ## Introduction
 The DE-MPC scheme is when for a continuous time system, $$ \dot x = f(x,u)$$, we solve the discretised OCP, (cite) Eq. 8, using a continuous solver, $$\dot z = \mathcal{T}(z,x)$$. The optimal control is based on the idea that the solution of the optimal control problem can be embedded in the
