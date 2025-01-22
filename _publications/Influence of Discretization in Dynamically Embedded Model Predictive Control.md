@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Influence of Discretization in Dynamically Embedded Model Predictive Control
-description: Distinction between sampling and discretization
+description: A counter intuitive effect of discretisation time step in Dynamically Embedded MPC
 img: assets/img/flow2_page-0001.jpg
 importance: 3
 category: work
