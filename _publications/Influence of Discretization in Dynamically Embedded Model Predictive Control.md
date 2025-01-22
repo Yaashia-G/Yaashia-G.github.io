@@ -58,20 +58,22 @@ Numerical Experiments that illustrate the interesting behaviour of discretisatio
 ### Linearised Lane Change
 
 <div class="row">
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0" style="float: left; margin-right: 15px;">
+    <div class="col-md-6" style="float: left; margin-right: 20px; max-width: 300px;">
         {% include figure.liquid loading="eager" path="assets/img/lane_change.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div>
         <p>
-            Left: Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. 
-            The image is displayed on the left side of the page with text wrapping around it. You can continue adding more paragraphs or details here.
+            This is an example of text wrapping around an image. Comparison of the position, velocity, and input trajectories for the three MPC schemes
+            subject to an additive disturbance on the input. You can continue writing your content here to test how it wraps around the image. The text
+            will adjust dynamically as more content is added.
         </p>
         <p>
-            Right: The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that 
-            consistently satisfies the real-time requirements.
+            The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that consistently 
+            satisfies the real-time requirements.
         </p>
     </div>
 </div>
+
 The disadvantage of MPC1 becomes apparent by examining the computation time required to solve the underlying
 OCP. As shown, the time required to solve
 MPC1 is approximately 30 times more than HMPC and
