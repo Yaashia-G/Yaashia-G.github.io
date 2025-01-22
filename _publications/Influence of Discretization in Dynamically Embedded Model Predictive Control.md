@@ -10,49 +10,44 @@ math: true
 ---
 _Access the paper  <a href="https://www.sciencedirect.com/science/article/pii/S2405896323016956" target="_blank">here </a>. Accepted to IFAC  World Congress 2023_
 
-As is popularly known, Model Predictive Control is a popular control scheme for many complex systems. However, implementing it to continuous systems, $$ \dot x = f(x,u)$$ is almost impossible if we choose to solve a Continuous Time Optimal Control Problem (CT-OCP). So, a more practical method is to solve a Discretised Optimal Control Problem (DT-OCP). One of the ways to find the optimal control law is to solve the DT-OCP using a continuous solver. The result, hereafter
+As is known, Model Predictive Control is a popular control scheme for many complex systems. However, implementing it to continuous systems, $$ \dot x = f(x,u)$$ is almost impossible if we choose to solve a Continuous Time Optimal Control Problem (CT-OCP). So, a more practical method is to solve a Discretised Optimal Control Problem (DT-OCP). One of the ways to find the optimal control law is to solve the DT-OCP using a continuous solver. The result, hereafter
 referred to as Dynamically Embedded MPC (DE-MPC), is
 a continuous-time MPC scheme that tracks the solution to
 the OCP with a bounded error, (cite). In this paper, we analyse the effect of discretisation on DE-MPC. Intuitively having more acccurate discretisation (smaller $$t_d$$) would lead to more stable control law, however that is not true.  
 
 ## Introduction
-
-
-
+The DE-MPC scheme is when for a continuous time system, $$ \dot x = f(x,u)$$, we solve the discretised OCP, (cite) Eq. 8, using a continuous solver, $$\dot z = \mathcal{T}(z,x)$$. The optimal control is based on the idea that the solution of the optimal control problem can be embedded in the
+internal states of a dynamic control law running in parallel to the system. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/flow2_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/system.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Hypersampled Model Predictive Control. The continuous system is sampled at timestep ts to generate xk , which is then used to compute the
-optimal control law to the discretized MPC problem
+ The DE-MPC architecture. By Input-State Stability theorem, for small enough errors, this interconnection of the 3 subsystems is stable.
 </div>
-
-The paper seeks to formalize the distinction between _discretization time_  $$t_d$$, i.e., the step size used to discretize the continuous time system, and _sampling time_  $$t_s$$, i.e., the time at which the controller is implemented.
+For a fixed prediction horizon $$T$$, intuitively, it would make sense that having a smaller discretisation time step $$t_d$$, would reduce the discretisation error, making the control law _more accurate_, however, this does not hold true. While decreasing $$t_d$$, the error between the
+continuous-time optimal control policy and its discrete
+approximation tends to zero. More importantly,
+the closed-loop response becomes slower as $$t_d$$
+increases. This behavior is likely due to the fact that the
+discretisation becomes increasingly unsta-
+ble as td increases, thereby causing the discretized control to be overdamped compared to the continuous-
+time solution. The solver on the other hand, assuming a fixed parameter x, converges faster for an increasing $$t_d$$. This can be explained by noting
+that higher values of $$t_d$$ entail lower $$N = T /td$$, thereby
+meaning that the optimization problem has fewer variables
+and is therefore easier to solve. The combination then results in higher values of
+td simultaneously slowing down the dynamics of the closed-
+loop system and speed up the convergence rate of the
+solver. This combined effect makes it easier for the DE-
+MPC to track the solution of the discretized OCP as the
+discretization step increases. 
 
 ## Experiments and Results
 Numerical Experiments that validate the efficiency of the HMPC scheme were run on a point mass system and a Lane change problem. All levels of complexities have shown that the HMPC performs better than traditional MPC schemes. 
 
-We note the following properties:
-• Benefits of Decreasing ts: Reducing the sampling
-time tends to improve the performance of the controller
-by making it more reactive to external disturbances.
-Generally speaking, one would like ts to be as small
-as possible to mimic continuous-time behaviour.
-• Limit for Decreasing ts: Due to real-time imple-
-mentation requirements, ts is lower-bounded by the
-computational time required to solve (8).
-• Benefits of Increasing td: Given a fixed prediction
-horizon T , a larger discretization time step td leads to
-less prediction steps N . Since the computational com-
-plexity of (8) scales with N , it is generally beneficial
-for td to be as large as possible.
-• Limit for Increasing td: Since larger values of td
-increase the discrepancy between 
-an upper bound on the maximal admissible error will
-translate into an upper bound on td.
+
 
 
 
