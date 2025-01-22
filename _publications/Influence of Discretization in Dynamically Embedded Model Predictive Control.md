@@ -33,11 +33,15 @@ approximation tends to zero. More importantly,
 the closed-loop response becomes slower as $$t_d$$
 increases. This behavior is likely due to the fact that the
 discretisation becomes increasingly unsta-
-ble as td increases, thereby causing the discretized control to be overdamped compared to the continuous-
-time solution. The solver on the other hand, assuming a fixed parameter x, converges faster for an increasing $$t_d$$. This can be explained by noting
+ble as $$t_d$$ increases, thereby causing the discretized control to be overdamped compared to the continuous-
+time solution. 
+
+The solver on the other hand, assuming a fixed parameter $$x$$, converges faster for an increasing $$t_d$$. This can be explained by noting
 that higher values of $$t_d$$ entail lower $$N = T /td$$, thereby
 meaning that the optimization problem has fewer variables
-and is therefore easier to solve. The combination then results in higher values of
+and is therefore easier to solve. 
+
+The combination then results in higher values of
 td simultaneously slowing down the dynamics of the closed-
 loop system and speed up the convergence rate of the
 solver. This combined effect makes it easier for the DE-
@@ -45,7 +49,7 @@ MPC to track the solution of the discretized OCP as the
 discretization step increases. 
 
 ## Experiments and Results
-Numerical Experiments that illustrate the interesting behaviour of discretisation time step variation were conducted. On a point mass system and a Linearised Lane change and a Nonlinearised Lane change problem. The Linearised Lane change example is shown below
+Numerical Experiments that illustrate the interesting behaviour of discretisation time step variation were conducted. On a point mass system and a Linearised Lane change and a Nonlinearised Lane change problem. The Linearised Lane change example is shown below.
 
 
 
