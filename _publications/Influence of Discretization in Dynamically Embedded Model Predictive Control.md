@@ -45,14 +45,13 @@ MPC to track the solution of the discretized OCP as the
 discretization step increases. 
 
 ## Experiments and Results
-Numerical Experiments that validate the efficiency of the HMPC scheme were run on a point mass system and a Lane change problem. All levels of complexities have shown that the HMPC performs better than traditional MPC schemes. 
+Numerical Experiments that illustrate the interesting behaviour of discretisation time step variation were conducted. On a point mass system and a Linearised Lane change and a Nonlinearised Lane change problem. The Linearised Lane change example is shown below
 
 
 
 
 
-
-### Point Mass System 
+### Linearised Lane Change
 The details of the Point mass system with disturbance can be found in {% cite HMPC %}. We compare the performance of two MPC schemes and a HMPC scheme.
 - MPC1: ts = td = 0.02s;
 - HMPC: ts = 0.02s and td = 0.4s;
@@ -76,29 +75,7 @@ MPC2. This is because MPC1 has a prediction length of
 N = 100 steps, whereas HMPC and MPC2 have a prediction
 length of only N = 5 steps.
 
-### Nonlinear Lane Change 
-To emphasize the advantages of HMPC with a more
-complex example, we consider the nonlinear lane change
-system detailed in {% cite lane_change%}.
-We compare the state and input trajectories obtained using three different schemes:
-- MPC1: ts = td = 0.04s;
-- HMPC: ts = 0.04s and td = 0.2s;
-- MPC2: ts = td = 0.2s.
-<div class="row">
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/x_nlc_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/tcomp_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Left: The state trajectories for the nonlinear lane change model. The
-trajectories of MPC1 and HMPC perform similarly, whereas MPC2 leads
-to an unstable closed-loop response. Right: Computation time utilized by MPC1 and HMPC compared to the
-sampling time ts. The computation time of MPC2 is not included due to
-the fact that the response is unstable.
-</div>
+
 
 
 
