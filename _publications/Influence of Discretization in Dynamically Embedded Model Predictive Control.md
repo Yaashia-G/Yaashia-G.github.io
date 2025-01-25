@@ -62,8 +62,9 @@ Numerical Experiments that illustrate the interesting behaviour of discretisatio
     </div>
     <div>
         <p>
-            Left: Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. 
-            The image is displayed on the left side of the page with text wrapping around it. You can continue adding more paragraphs or details here.
+        The figured shows position for the Lane change maneuver for a linearized system.
+Given a fixed solver, the response can be destabilized
+by selecting an excessively small discretization step.
         </p>
     </div>
 </div>
