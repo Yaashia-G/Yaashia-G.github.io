@@ -70,32 +70,11 @@ by selecting an excessively small discretization step.
         </p>
     </div>
 </div>
-\begin{table}
-\centering
-\vspace{3pt}
-\caption{\emph{Effect of discretization on the\\ linearized lane change model.}}
-\resizebox{\columnwidth}{!}{
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-% &
-% \multicolumn{5}{|c|}{Nominal $\mc{T}$} \\
-% \hline
-$t_d$ & .06 & .1 & .12 & .2 & .3 \\%& 195 &10.8 \\
-\hline
-$N$& 30 & 18 & 15 &9& 6\\%& 1080 &57.9 \\
-\hline
- $\max(|eig(A_d)|)$& 24.5708 &41.5986 & 50.1127 & 84.1691& 126.7397\\%& 195 &10.8 \\
-\hline
-% TMAX [ms] & 475 & 1.12 & 9.96 &9.98& 3710 \\%& 1080 &57.9
-% \hline
-$\max(|eig(A_d)|^N)$& 5e41 &  1e29 & 3e25& 2e17&4e12\\%& 195 &10.8 \\
-\hline
-\end{tabular}}
-\label{tab:dt vs ocp}
-\end{table}
 
-we verify that, for a fixed flow rate of the
+
+We verify that, for a fixed flow rate of the
 solver, lowering td can make the interconnection unstable.
-To provide more insight on this behavior, Table 1 reports
+To provide more insight on this behavior, {%cite %} Table 1 reports
 the eigenvalues of the open-loop matrix Ad and its matrix
 exponential, with N = T /td. The table shows that
 decreasing td causes the matrix exponential to have larger eigenvalues which,
