@@ -8,7 +8,7 @@ category: work
 related_publications: true
 math: true
 ---
-_Access the paper  <a href="https://arxiv.org/abs/2310.02623" target="_blank">here </a>. Accepted to ACC 2024_
+_Access the paper  <a href="https://ieeexplore.ieee.org/document/10644911" target="_blank">here </a>. Accepted to ACC 2024_
 
 Model Predictive Control (MPC) is a popular constrained
 control strategy for nonlinear systems. The idea behind
@@ -20,7 +20,7 @@ widespread adoption is hindered by the fact that solving the
 optimal control problem in real time can be challenging. So we analyse the Hypersampled Model Predictive Control (HMPC) scheme, which is more efficient.
 
 ## Introduction
-Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual methods of finding a control law is to discretise the system. This
+Consider the continuous time system $$ \dot x = f(x,u)$$. The aim is to derive an optimal control law by solving the Optimal Control Problem (OCP), {% cite HMPC %} Equation 3. This can prove to be _problematic_, since this is an infinite dimensional problem. So, usual method of finding a control law is to discretise the system. This
 approach assumes that the dynamic model of the system
 matches the prediction model of the OCP. 
 
@@ -49,23 +49,21 @@ The paper seeks to formalize the distinction between _discretization time_  $$t_
 Numerical Experiments that validate the efficiency of the HMPC scheme were run on a point mass system and a Lane change problem. All levels of complexities have shown that the HMPC performs better than traditional MPC schemes. 
 
 We note the following properties:
-• Benefits of Decreasing ts: Reducing the sampling
+-Benefits of Decreasing $$t_s$$: Reducing the sampling
 time tends to improve the performance of the controller
 by making it more reactive to external disturbances.
-Generally speaking, one would like ts to be as small
-as possible to mimic continuous-time behaviour.
-• Limit for Decreasing ts: Due to real-time imple-
-mentation requirements, ts is lower-bounded by the
-computational time required to solve (8).
-• Benefits of Increasing td: Given a fixed prediction
-horizon T , a larger discretization time step td leads to
+- Limit for Decreasing $$t_s$$: Due to real-time imple-
+mentation requirements, $$t_s$$ is lower-bounded by the
+computational time required to solve the OCP.
+- Benefits of Increasing $$t_d$$: Given a fixed prediction
+horizon $$T$$ , a larger discretization time step leads to
 less prediction steps N . Since the computational com-
-plexity of (8) scales with N , it is generally beneficial
+plexity oscales with N , it is generally beneficial
 for td to be as large as possible.
-• Limit for Increasing td: Since larger values of td
+-Limit for Increasing $$t_d$$: Since larger values of $$t_d$$
 increase the discrepancy between 
 an upper bound on the maximal admissible error will
-translate into an upper bound on td.
+translate into an upper bound on $$t_d$$.
 
 
 
