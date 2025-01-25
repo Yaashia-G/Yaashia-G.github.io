@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Talks and Teaching"
-permalink: /talks-and-teaching/
+title: "Talks and Involvement"
+permalink: /talks-and-involvement/
 ---
 # Talks and Teaching
 
