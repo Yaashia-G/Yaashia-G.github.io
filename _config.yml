@@ -204,7 +204,7 @@ collections:
     permalink: /publications/:path/
   Talks and Involvement:
     output: true
-    permalink: /Talks and Involvement/:path/
+    permalink: /talks-and-involvement/:path/
 
 announcements:
   enabled: true
