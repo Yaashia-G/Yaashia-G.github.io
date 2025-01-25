@@ -32,8 +32,7 @@ continuous-time optimal control policy and its discrete
 approximation tends to zero. More importantly,
 the closed-loop response becomes slower as $$t_d$$
 increases. This behavior is likely due to the fact that the
-discretisation becomes increasingly unsta-
-ble as $$t_d$$ increases, thereby causing the discretized control to be overdamped compared to the continuous-
+discretisation becomes increasingly unstable as $$t_d$$ increases, thereby causing the discretized control to be overdamped compared to the continuous-
 time solution. 
 
 The solver on the other hand, assuming a fixed parameter $$x$$, converges faster for an increasing $$t_d$$. This can be explained by noting
@@ -59,27 +58,18 @@ Numerical Experiments that illustrate the interesting behaviour of discretisatio
 
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0" style="float: left; margin-right: 15px;">
-        {% include figure.liquid loading="eager" path="assets/img/error_di_ts0.02_page-0001.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lane_change.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div>
         <p>
             Left: Comparison of the position, velocity, and input trajectories for the three MPC schemes subject to an additive disturbance on the input. 
             The image is displayed on the left side of the page with text wrapping around it. You can continue adding more paragraphs or details here.
         </p>
-        <p>
-            Right: The computation time for the three schemes with noise, compared to the sampling time ts = 0.02. HMPC is the only scheme that 
-            consistently satisfies the real-time requirements.
-        </p>
     </div>
 </div>
 
 
-The disadvantage of MPC1 becomes apparent by examining the computation time required to solve the underlying
-OCP. As shown, the time required to solve
-MPC1 is approximately 30 times more than HMPC and
-MPC2. This is because MPC1 has a prediction length of
-N = 100 steps, whereas HMPC and MPC2 have a prediction
-length of only N = 5 steps.
+
 
 
 
