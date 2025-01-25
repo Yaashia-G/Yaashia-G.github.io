@@ -74,7 +74,7 @@ by selecting an excessively small discretization step.
 
 We verify that, for a fixed flow rate of the
 solver, lowering td can make the interconnection unstable.
-To provide more insight on this behavior, {%cite %} Table 1 reports
+To provide more insight on this behavior, {%cite ifac %} Table 1 reports
 the eigenvalues of the open-loop matrix Ad and its matrix
 exponential, with N = T /td. The table shows that
 decreasing td causes the matrix exponential to have larger eigenvalues which,
