@@ -48,7 +48,9 @@ MPC to track the solution of the discretized OCP as the
 discretization step increases. 
 
 ## Experiments and Results
-Numerical Experiments that illustrate the interesting behaviour of discretisation time step variation were conducted. On a point mass system and a Linearised Lane change and a Nonlinearised Lane change problem. The Linearised Lane change example is shown below.
+Numerical Experiments that illustrate the interesting behaviour of discretisation time step variation were conducted. On a point mass system, a Linearised Lane change and a Nonlinearised Lane change problem. The Linearised Lane change example is shown below. The details of the linearised lane change are the same as in {% cite lane_change %} but without the dynamic
+extension, i.e. the control input u are the steering angles
+and not their derivatives.
 
 
 
