@@ -3,6 +3,7 @@ layout: page
 title: "Talks and Involvement"
 permalink: /talks-and-involvement/
 nav: true
+nav_order: 5
 ---
 # Talks and Teaching
 
