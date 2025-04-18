@@ -9,7 +9,7 @@ related_publications: true
 math: true
 ---
 
-_Preprint coming soon_
+_Access the preprint   <a href="https://doi.org/10.48550/arXiv.2504.09188" target="_blank">here </a>. Accepted to ACC 2024_
 
 The Explicit Reference Governor (ERG)
 is a control scheme that is an optimisation free alternative to
