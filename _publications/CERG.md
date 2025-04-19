@@ -25,7 +25,7 @@ While the ERG is a great scheme that is also computationally inexpensive {% cite
 
 
 ## Introduction
-The CERG is a reference management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. 
+The CERG is a reference management scheme that differentiates between soft and hard constraints for contact friendly robotics. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. 
 One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which for simple systems can be converted into Maximum Force Limitations. The CERG algorithm is such that it ensures that soft constraints are only violated if necessary, and the interaction is safe, whereas hard constraints are never violated.
 
 <div class="row">
