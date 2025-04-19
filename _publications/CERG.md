@@ -26,7 +26,7 @@ While the ERG is a great scheme that is also computationally inexpensive {% cite
 
 ## Introduction
 The CERG is a reference management scheme that differentiates between soft and hard constraints. The hard constraints are non-violatable, for example: actuator saturation, torque limitations etc. However, the soft constraints are violatable and allow the robot to interact with the environment. 
-One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which at steady state can be converted to Maximum Force Limitations. The CERG algorithm is such that it ensures that soft constraints are only violated if necessary, and the interaction is safe, whereas hard constraints are never violated.
+One of the major concerns as the robot interacts with the environment is safety. We deal with this concern using Maximum Energy Limitations, which for simple systems can be converted into Maximum Force Limitations. The CERG algorithm is such that it ensures that soft constraints are only violated if necessary, and the interaction is safe, whereas hard constraints are never violated.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -78,7 +78,7 @@ Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector 
 It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
 
 ### Drake Simulations of the Franka Emika 
-Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emika in <a href="https://drake.mit.edu/" target="_blank"> Drake simulator</a>. The contact model is chosen to be (check). The Franka robot is subject to all the actuator, speed and torque limitations as specified [here](https://frankaemika.github.io/docs/control_parameters.html), the reference of the Franka is inside the soft blue wall and the maximum force of interaction is set in the direction of pushing, $$F_x = 0.8N$$. As can be seen by the contact forces calculated in the Drake model, the maximum force of interaction in the $$x$$ coordinate is around $$0.4N$$, which is well within range.  
+Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emika in <a href="https://drake.mit.edu/" target="_blank"> Drake simulator</a>. The contact model is chosen to be Compliant Point Contact. The Franka robot is subject to all the actuator, speed and torque limitations as specified [here](https://frankaemika.github.io/docs/control_parameters.html), the reference of the Franka is inside the soft blue wall and the maximum force of interaction is set in the direction of pushing, $$F_x = 0.8N$$. As can be seen by the contact forces calculated in the Drake model, the maximum force of interaction in the $$x$$ coordinate is around $$0.4N$$, which is well within range.  
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/FR3-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
