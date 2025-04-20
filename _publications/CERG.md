@@ -47,7 +47,7 @@ Numerical Experiments that validated the premise of the CERG scheme were run on 
 ### Two Link Robot Manipulator 
 The details of the Two Link Robot can be found in {% cite ModernRobotics %}. For the purpose of this example, we choose our prestabilising law to be in end effector frame as shown 
 $$ u = -K_P J(q)^\top (f(q) - f(v)) - K_D\dot q + g(q) $$
-Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under the $$F_{/max} = 5N$$. 
+Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under  $$E_{/max} $$. 
 The discussion on choosing Task Space Controller as opposed to Joint Space Controller is present in the paper. The following figure shows the RR arm under Task Space Control with a very compliant wall
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
