@@ -96,7 +96,7 @@ Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emi
         {% include figure.liquid loading="eager" path="assets/img/FR3-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/noCERG_comparison.pdf" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1745144434582-1dafd882-1eac-4e88-8d9d-4d506776544c_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
