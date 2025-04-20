@@ -48,7 +48,7 @@ Numerical Experiments that validated the premise of the CERG scheme were run on 
 The details of the Two Link Robot can be found in {% cite ModernRobotics %}. For the purpose of this example, we choose our prestabilising law to be in end effector frame as shown 
 $$ u = -K_P J(q)^\top (f(q) - f(v)) - K_D\dot q + g(q) $$
 Where $$K_P = 16I_2, K_D = 10I_2$$. As seen in the figure below, the $$r$$ is beyond the soft constraint. Choosing the control law in end effector space allows the robot end effector to get as close to the constraint as possible, while still remaining under the $$F_{/max} = 5N$$. 
-The discussion on choosing Task Space Controller as opposed to Joint Space
+The discussion on choosing Task Space Controller as opposed to Joint Space Controller is present in the paper. The following figure shows the RR arm under Task Space Control with a very compliant wall
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/RR_cdc_paper_vid.gif" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -58,7 +58,7 @@ The discussion on choosing Task Space Controller as opposed to Joint Space
     </div>
 </div>
 <div class="caption">
-    $$\delta_s = 0.1F_{\max}/K_P$$ A lower penetration constant means a relatively lower force of pushing. This also means that we don't 'enter' our soft constraint as much. 
+ The motion of the arm, the auxiliary reference, as well as the forces of interaction. Notice how it is possible to get to the point closest along the wall using end effector control law.
 </div>
 Now to understand the effects of the penetration constant $$\delta_s$$, let us set it as $$\delta_s = 0.1F_{\max}/K_P$$.   
 <div class="row">
@@ -96,11 +96,11 @@ Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emi
         {% include figure.liquid loading="eager" path="assets/img/FR3-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Contact_Forces.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/noCERG_comparison.pdf" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Compliant ERG validated on the Franka Emika robot in Drake. 
+    Compliant ERG validated on the Franka Emika robot in Drake. Forces of interaction with and without the CERG. 
 </div>
 
 
