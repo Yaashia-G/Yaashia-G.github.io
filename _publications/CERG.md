@@ -72,7 +72,7 @@ Now to understand the effects of the penetration constant $$\delta_s$$, let us s
 <div class="caption">
     $$\delta_s = 0.1F_{\max}/K_P$$ A lower penetration constant means a relatively lower force of pushing. This also means that we don't 'enter' our soft constraint as much. 
 </div>
-As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum force of interaction. 
+As can be seen, the end effector trajectory of the RR arm slides along the soft wall. Notably, we don't violate the maximum energy of interaction. 
 
 Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector trajectory enters the soft constraint. The force of pushing is also higher. At steady state we converge to $$F>0$$. 
 <div class="row">
@@ -87,10 +87,10 @@ Now, if we set $$\delta_s = 0.9F_{\max}/K_P$$. As can be seen, the end effector 
  $$\delta_s = 0.9F_{\max}/K_P$$ A higher penetration constant means a relatively higher force of pushing.  
 </div>
 
-It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases however, $$F <F_{\max}$$, which ensures the safety of interaction.   
+It can be seen from these examples that the penetration constant effects how much we push against our soft constraints. In all cases interestingly, $$F <F_{\max}$$, which is set by the maximum energy of interaction $$E_{\max}$$, ensuring the safety of interaction.   
 
 ### Drake Simulations of the Franka Emika 
-Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emika in <a href="https://drake.mit.edu/" target="_blank"> Drake simulator</a>. The contact model is chosen to be Compliant Point Contact. The Franka robot is subject to all the actuator, speed and torque limitations as specified [here](https://frankaemika.github.io/docs/control_parameters.html), the reference of the Franka is inside the soft blue wall and the maximum force of interaction is set in the direction of pushing, $$F_x = 0.8N$$. As can be seen by the contact forces calculated in the Drake model, the maximum force of interaction in the $$x$$ coordinate is around $$0.4N$$, which is well within range.  
+Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emika in <a href="https://drake.mit.edu/" target="_blank"> Drake simulator</a>. The contact model is chosen to be Compliant Point Contact. The Franka robot is subject to all the actuator, speed and torque limitations as specified [here](https://frankaemika.github.io/docs/control_parameters.html), the reference of the Franka is inside the soft blue wall.  
 <div class="row">
     <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/FR3-gif.gif" title="example image" class="img-fluid rounded z-depth-1" %}
