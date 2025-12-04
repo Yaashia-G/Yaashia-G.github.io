@@ -103,24 +103,77 @@ Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emi
     Compliant ERG validated on the Franka Emika robot in Drake. Forces of interaction with and without the CERG. 
 </div>
 
-### Hardware Experiments on the Franka Emika Panda
+## Hardware Experiments on the Franka Emika Panda
 
-We further validate the Compliant Explicit Reference Governor (CERG) on real hardware using the Franka Emika Panda robot. Two representative manipulation tasks are considered: (i) wiping motions over a surface with varying friction profiles, and (ii) pushing and perturbing a Jenga tower. We compare our CERG-modulated controller against a baseline ERG implementation and a finely tuned Cartesian impedance controller. As seen in the videos, CERG naturally adapts the allowable reference motion under hard and soft constraints, resulting in smoother contact transitions, reduced impact forces, and significantly improved task success rates compared to the baselines.
+We validate the Compliant Explicit Reference Governor (CERG) on real hardware using the Franka Emika Panda robot across two representative manipulation tasks. The objective of these experiments is to assess how CERG enforces hard and soft constraints during contact-rich interaction, modulates the allowable reference motion under different energy bounds, and reduces impact forces during contact transitions.
 
+To contextualize CERG’s performance, we compare it against two baselines:
+- **Classical Explicit Reference Governor (ERG)**
+- **Finely tuned Cartesian Impedance Controller**
+
+The experiments are organized into two subsections below, each describing a task and showing video comparisons between CERG, ERG, and impedance control.
+
+---
+
+## 1. Wiping Task
+
+In this task, the robot performs wiping motions over a flat surface. We vary the desired interaction energy bound \(E_{\max}\) and assess whether each controller can complete the task while respecting the imposed constraints.
+
+CERG adapts the reference trajectory online to satisfy the energy bound \(E_{\max}\), producing smooth, stable contact while keeping joint and torque limits within bounds. In contrast, the baseline ERG cannot consistently enforce \(E_{\max}\): for tighter energy limits it either stalls or generates larger contact transients that violate the intended energy budget.
+
+For comparison with the Cartesian impedance controller, we consider multiple initial conditions. When tuned to complete the task “perfectly” from a nominal start pose, the impedance controller often drives the robot into joint velocity limit violations or aggressive transients when the initial configuration is perturbed. CERG, in contrast, remains robust across these different initial conditions while still completing the wiping task.
+
+### CERG Results
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/Cerg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/Cerg jenga.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Cerg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
+</div>
+
+### Baseline Controllers: ERG and Impedance
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Erg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
+    
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Impdenace jenga ideal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
 </div>
 
 <div class="caption">
-    Hardware validation on the Franka Emika Panda robot. CERG ensures safe, constraint-aware contact behaviors across wiping and Jenga pushing tasks, outperforming ERG and impedance baselines during high-contact phases.
+Comparison of CERG, ERG, and impedance performance on the wiping task, highlighting energy-bound enforcement and robustness to different initial conditions.
 </div>
 
+---
+
+## 2. Jenga Tower Pushing and Perturbation
+
+In this experiment, the robot interacts with a Jenga tower through controlled lateral pushes and small perturbations. The goal is to inject just enough energy to explore the tower configuration without causing collapse.
+
+CERG maintains a low-energy interaction regime by regulating the reference motion according to the chosen \(E_{\max}\), preventing large impulsive forces while still allowing meaningful manipulation of the tower. The ERG and impedance baselines, by contrast, frequently produce higher-impact contacts that deform or topple the tower, especially when tuned aggressively for task completion.
+
+### CERG Results
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Cerg jenga.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
 </div>
+
+### Baseline Controllers: ERG and Impedance
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Erg jenga.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/Impedance jenga ideal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
+</div>
+
+<div class="caption">
+Comparison of CERG, ERG, and impedance control during the Jenga pushing and perturbation task, emphasizing energy-bounded interaction and tower stability.
+</div>
+
 
 
 
