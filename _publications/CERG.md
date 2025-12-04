@@ -107,30 +107,19 @@ Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emi
 
 We further validate the Compliant Explicit Reference Governor (CERG) on real hardware using the Franka Emika Panda robot. Two representative manipulation tasks are considered: (i) wiping motions over a surface with varying friction profiles, and (ii) pushing and perturbing a Jenga tower. We compare our CERG-modulated controller against a baseline ERG implementation and a finely tuned Cartesian impedance controller. As seen in the videos, CERG naturally adapts the allowable reference motion under hard and soft constraints, resulting in smoother contact transitions, reduced impact forces, and significantly improved task success rates compared to the baselines.
 
-<div class="row">
-  <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-    <video controls preload="metadata" class="img-fluid rounded z-depth-1">
-      <source src="/assets/video/cerg_wiping.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="caption mt-2 text-center">
-      Wiping task on the Franka Emika Panda with CERG.
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/Cerg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
-  </div>
-
-  <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-    <video controls preload="metadata" class="img-fluid rounded z-depth-1">
-      <source src="/assets/video/cerg_jenga.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="caption mt-2 text-center">
-      CERG-controlled Jenga tower pushing on the Franka Emika Panda.
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/Cerg jenga.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
-  </div>
 </div>
 
 <div class="caption">
-  Hardware validation on the Franka Emika Panda robot. CERG ensures safe, constraint-aware contact behaviors across wiping and Jenga pushing tasks, outperforming ERG and impedance baselines during high-contact phases.
+    Hardware validation on the Franka Emika Panda robot. CERG ensures safe, constraint-aware contact behaviors across wiping and Jenga pushing tasks, outperforming ERG and impedance baselines during high-contact phases.
+</div>
+
 </div>
 
 
