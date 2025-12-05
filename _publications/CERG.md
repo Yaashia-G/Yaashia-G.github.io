@@ -108,7 +108,7 @@ Lastly, we demonstrate the CERG on a more realistic simulation on the Franka Emi
 We validate the Compliant Explicit Reference Governor (CERG) on real hardware using the Franka Emika Panda robot across two representative manipulation tasks. The objective of these experiments is to assess how CERG enforces hard and soft constraints during contact-rich interaction, modulates the allowable reference motion under different energy bounds, and reduces impact forces during contact transitions.
 
 To contextualize CERG’s performance, we compare it against two baselines:
-- **Classical Explicit Reference Governor (ERG)**
+- **Explicit Reference Governor (ERG)**
 - **Finely tuned Cartesian Impedance Controller**
 
 The experiments are organized into two subsections below, each describing a task and showing video comparisons between CERG, ERG, and impedance control.
@@ -151,7 +151,7 @@ Comparison of CERG, ERG, and impedance performance on the wiping task, highlight
 
 In this experiment, the robot interacts with a Jenga tower through controlled lateral pushes and small perturbations. The goal is to inject just enough energy to explore the tower configuration without causing collapse.
 
-CERG maintains a low-energy interaction regime by regulating the reference motion according to the chosen \(E_{\max}\), preventing large impulsive forces while still allowing meaningful manipulation of the tower. The ERG and impedance baselines, by contrast, frequently produce higher-impact contacts that deform or topple the tower, especially when tuned aggressively for task completion.
+CERG maintains a low-energy interaction regime by regulating the reference motion according to the chosen $$(E_{\max}$$), preventing large impulsive forces while still allowing meaningful manipulation of the tower. The ERG and impedance baselines, by contrast, frequently produce higher-impact contacts that deform or topple the tower, especially when tuned aggressively for task completion.
 
 ### CERG Results
 <div class="row mt-3">
