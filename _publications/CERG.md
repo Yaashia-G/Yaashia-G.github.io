@@ -117,7 +117,7 @@ The experiments are organized into two subsections below, each describing a task
 
 ## 1. Wiping Task
 
-In this task, the robot performs wiping motions over a flat surface. We vary the desired interaction energy bound \(E_{\max}\) and assess whether each controller can complete the task while respecting the imposed constraints.
+In this task, the robot performs wiping motions over a flat surface. We vary the desired interaction energy bound $$(E_{\max}$$) and assess whether each controller can complete the task while respecting the imposed constraints.
 
 CERG adapts the reference trajectory online to satisfy the energy bound \(E_{\max}\), producing smooth, stable contact while keeping joint and torque limits within bounds. In contrast, the baseline ERG cannot consistently enforce \(E_{\max}\): for tighter energy limits it either stalls or generates larger contact transients that violate the intended energy budget.
 
