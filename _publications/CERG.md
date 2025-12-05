@@ -129,7 +129,7 @@ CERG adapts the reference trajectory online to satisfy the energy bound $$(E_{\m
 Even when put in different initial conditions far away from the whiteboard,CERG is able to complete the task without difficulty.  
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
-    {% include video.liquid path="assets/video/vid_1.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    {% include video.liquid path="assets/video/untitled.mp4" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
 </div>
 
