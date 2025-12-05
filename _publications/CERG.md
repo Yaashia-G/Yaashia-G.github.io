@@ -174,7 +174,7 @@ CERG maintains a low-energy interaction regime by regulating the reference motio
     {% include video.liquid path="assets/video/Erg jenga.mp4" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include video.liquid path="assets/video/Impedance jenga ideal.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    {% include video.liquid path="assets/video/Impedance jenga ideal.webm" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
 </div>
 
