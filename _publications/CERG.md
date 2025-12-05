@@ -119,18 +119,26 @@ The experiments are organized into two subsections below, each describing a task
 
 In this task, the robot performs wiping motions over a flat surface. We vary the desired interaction energy bound $$(E_{\max}$$) and assess whether each controller can complete the task while respecting the imposed constraints.
 
-CERG adapts the reference trajectory online to satisfy the energy bound \(E_{\max}\), producing smooth, stable contact while keeping joint and torque limits within bounds. In contrast, the baseline ERG cannot consistently enforce \(E_{\max}\): for tighter energy limits it either stalls or generates larger contact transients that violate the intended energy budget.
-
-For comparison with the Cartesian impedance controller, we consider multiple initial conditions. When tuned to complete the task “perfectly” from a nominal start pose, the impedance controller often drives the robot into joint velocity limit violations or aggressive transients when the initial configuration is perturbed. CERG, in contrast, remains robust across these different initial conditions while still completing the wiping task.
-
+CERG adapts the reference trajectory online to satisfy the energy bound $$(E_{\max}$$) as well as the hard constraints of joint and velocity limits. 
 ### CERG Results
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/Cerg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
 </div>
+Even when put in different initial conditions far away from the whiteboard,CERG is able to complete the task without difficulty.  
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/vid_1.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+  </div>
+</div>
+
+For comparison with the Cartesian impedance controller, we consider multiple initial conditions. When tuned to complete the task “perfectly” from a nominal start pose, the impedance controller often drives the robot into joint velocity limit violations or aggressive transients when the initial configuration is perturbed. CERG, in contrast, remains robust across these different initial conditions while still completing the wiping task.
+
+
 
 ### Baseline Controllers: ERG and Impedance
+ In contrast, the baseline ERG cannot consistently enforce $$(E_{\max}$$): for tighter energy limits it either stalls or generates larger contact transients that violate the intended energy budget.
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/Erg wiping.mp4" class="img-fluid rounded z-depth-1" controls=true %}
