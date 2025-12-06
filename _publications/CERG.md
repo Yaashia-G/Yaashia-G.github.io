@@ -182,21 +182,22 @@ Due to the nature of the task, the task is bvery sensitive
 <div class="caption">
 Comparison of CERG, ERG, and impedance control during the Jenga pushing and perturbation task, emphasizing energy-bounded interaction and tower stability.
 </div>
-
+<!-- Row 1 -->
+<div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/vid_4.mp4" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
-</div>
 
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/impedance_jenga.webm" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
 </div>
 
+<!-- Row 2 -->
+<div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/vid_7.mp4" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
-</div>
 
   <div class="col-sm mt-3 mt-md-0">
     {% include video.liquid path="assets/video/vid_8.mp4" class="img-fluid rounded z-depth-1" controls=true %}
