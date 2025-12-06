@@ -145,7 +145,7 @@ For comparison with the Cartesian impedance controller, we consider multiple ini
   </div>
     
   <div class="col-sm mt-3 mt-md-0">
-    {% include video.liquid path="assets/video/Impdenace jenga ideal.webm" class="img-fluid rounded z-depth-1" controls=true %}
+    {% include video.liquid path="assets/video/impedance_jenga_ideal.webm" class="img-fluid rounded z-depth-1" controls=true %}
   </div>
 </div>
 
