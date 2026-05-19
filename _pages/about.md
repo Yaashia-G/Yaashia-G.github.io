@@ -15,7 +15,7 @@ selected_papers: false
 social: true # includes social icons at the bottom of the page
 latest_posts: false
 ---
-Hi, I'm Yaashia Gautam! I am a PhD student in the [Department of Electrical, Computer, and Energy Engineering](https://www.colorado.edu/ecee/) at the University of Colorado, Boulder. I am advised by [Professor Marco Nicotra](https://www.colorado.edu/faculty/nicotra). My research is centered around robotic controls and manipulation. I am developing algorithms to make robots contact friendly, and leverage methods in control theory to do so. I am particularly interested in leveraging the intersection of AI/ML and control theory to develop better methods for human-robot interaction keeping safety considerations in mind.
+Hi, I'm Yaashia Gautam! I am a PhD student in the [Department of Electrical, Computer, and Energy Engineering](https://www.colorado.edu/ecee/) at the University of Colorado, Boulder. I am advised by [Professor Marco Nicotra](https://www.colorado.edu/faculty/nicotra). I work closely with the [HIRO group](https://hiro-group.ronc.one) under [Professor Alessandro Roncone](https://www.colorado.edu/cs/alessandro-roncone) and [Professor Nikolaus Correll](https://www.colorado.edu/lab/correll/). My research is centered around robotic controls and manipulation. I am developing algorithms to make robots contact friendly, and leverage methods in control theory to do so. I am particularly interested in leveraging the intersection of AI/ML and control theory to develop better methods for human-robot interaction keeping safety considerations in mind.
 
 
 
