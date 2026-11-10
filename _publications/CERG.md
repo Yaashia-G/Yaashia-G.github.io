@@ -70,7 +70,7 @@ The robot wipes a whiteboard, a task that needs sustained contact with the right
   </div>
 </div>
 <div class="caption">
-    CERG wiping the whiteboard. The reference is reshaped online so the robot keeps contact with the board while its energy stays under $$E_{\max}$$, and the joint and velocity limits are never violated.
+    CERG wiping the whiteboard. The reference is reshaped online so the robot keeps contact with the board while its energy stays under E<sub>max</sub>, and the joint and velocity limits are never violated.
 </div>
 
 <div class="row mt-3">
@@ -93,7 +93,7 @@ The robot wipes a whiteboard, a task that needs sustained contact with the right
   </div>
 </div>
 <div class="caption">
-    Left: ERG completes the wipe, but it has no energy term, so it cannot enforce $$E_{\max}$$ during contact. Right: impedance control tuned to complete the task from the nominal start pose.
+    Left: ERG completes the wipe, but it has no energy term, so it cannot enforce E<sub>max</sub> during contact. Right: impedance control tuned to complete the task from the nominal start pose.
 </div>
 
 <div class="row mt-3">

@@ -78,7 +78,7 @@ With a small penetration constant, $$\delta_s = 0.1F_{\max}/K_P$$, the reference
     </div>
 </div>
 <div class="caption">
-    $$\delta_s = 0.1F_{\max}/K_P$$: low penetration, low contact force.
+    δ<sub>s</sub> = 0.1 F<sub>max</sub>/K<sub>P</sub>: low penetration, low contact force.
 </div>
 
 With a large penetration constant, $$\delta_s = 0.9F_{\max}/K_P$$, the end effector enters the soft constraint further and pushes harder, converging to a nonzero steady-state force.
@@ -92,7 +92,7 @@ With a large penetration constant, $$\delta_s = 0.9F_{\max}/K_P$$, the end effec
     </div>
 </div>
 <div class="caption">
-    $$\delta_s = 0.9F_{\max}/K_P$$: deeper penetration, higher contact force.
+    δ<sub>s</sub> = 0.9 F<sub>max</sub>/K<sub>P</sub>: deeper penetration, higher contact force.
 </div>
 
 In both cases the contact force stays below $$F_{\max}$$, which is set by $$E_{\max}$$. The penetration constant tunes *how much* the robot pushes; the energy bound guarantees it never pushes too hard.
