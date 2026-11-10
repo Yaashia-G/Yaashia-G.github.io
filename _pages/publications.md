@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-permalink: /ublications/
+permalink: /publications/
 description: Papers and preprints.
 nav: true
 nav_order: 4
