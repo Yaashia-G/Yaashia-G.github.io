@@ -4,7 +4,7 @@ title: "CERG: Hardware Experiments"
 description: Energy-bounded contact on a real Franka. IFAC World Congress 2026
 img: assets/img/cerg block diag.jpg
 importance: 2
-category: work
+category: published
 related_publications: true
 math: true
 ---

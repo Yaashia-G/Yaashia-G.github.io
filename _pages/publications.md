@@ -5,6 +5,7 @@ permalink: /publications/
 description: Papers and preprints.
 nav: true
 nav_order: 4
+display_categories: [published, in progress]
 horizontal: false
 ---
 

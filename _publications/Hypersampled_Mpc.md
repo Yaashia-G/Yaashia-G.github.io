@@ -4,7 +4,7 @@ title: Hypersampled Model Predictive Control
 description: Distinction between sampling and discretization
 img: assets/img/flow2_page-0001.jpg
 importance: 4
-category: work
+category: published
 related_publications: true
 math: true
 ---
