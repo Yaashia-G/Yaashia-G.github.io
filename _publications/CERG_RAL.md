@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CERG: From Single Arms to Humanoids"
-description: Energy bands that make contact safe, effective and adaptive. In preparation for RA-L
+description: Energy bands that make contact safe, effective and adaptive. In preparation for T-RO
 img: assets/img/cerg_ral_thumb.jpg
 importance: 6
 category: in progress
@@ -9,7 +9,7 @@ related_publications: false
 math: true
 ---
 
-_In preparation for IEEE Robotics and Automation Letters (RA-L), submission planned for February 2027. Results on this page are preliminary._
+_In preparation for IEEE Transactions on Robotics (T-RO), submission planned for February 2027. Results on this page are preliminary._
 
 _**Y. Gautam**, U. Yousaf, A. Roncone, M. M. Nicotra. "Compliant Explicit Reference Governors: Energy-Based Safety for Contact-Rich Manipulation from Single Arms to Humanoids."_
 
