@@ -1,6 +1,6 @@
 ---
 layout: page
-title: teaching
+title: Teaching
 permalink: /teaching/
 description: Interactive teaching material. Works in progress, updated as I use them.
 nav: true
