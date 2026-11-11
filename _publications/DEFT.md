@@ -3,8 +3,8 @@ layout: page
 title: "DEFT: Fail-Active Trajectory Generation"
 description: Diffusion policies that keep a damaged robot working. ICRA 2026
 img: assets/img/deft_fig1.png
-importance: 1
-category: published
+importance: 4
+category: other work
 related_publications: true
 math: true
 ---

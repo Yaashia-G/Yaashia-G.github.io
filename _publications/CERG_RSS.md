@@ -4,7 +4,7 @@ title: "CERG: Simulation Results"
 description: Contact-friendly reference governor, validated in simulation. RSS 2025 HRCM Workshop
 img: assets/img/FR3-gif.gif
 importance: 3
-category: published
+category: featured
 related_publications: true
 math: true
 ---

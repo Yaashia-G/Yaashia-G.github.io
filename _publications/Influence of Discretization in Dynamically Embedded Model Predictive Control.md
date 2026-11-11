@@ -3,8 +3,8 @@ layout: page
 title: Influence of Discretization in Dynamically Embedded Model Predictive Control
 description: A counter intuitive effect of discretisation time step in Dynamically Embedded MPC
 img: assets/img/system.jpg
-importance: 5
-category: published
+importance: 6
+category: other work
 related_publications: true
 math: true
 ---

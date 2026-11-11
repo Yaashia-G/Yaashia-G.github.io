@@ -4,7 +4,7 @@ title: "CERG: From Single Arms to Humanoids"
 description: Energy bands that make contact safe, effective and adaptive. In preparation for T-RO
 img: assets/img/cerg_ral_thumb.jpg
 importance: 1
-category: in progress
+category: featured
 related_publications: false
 ---
 
